@@ -10,15 +10,12 @@ angular.module('ControllerAsApp', [])
 ShoppingListController1.$inject = ['ShoppingListFactory'];
 function ShoppingListController1(ShoppingListFactory) {
   var list1 = this;
-
   // Use factory to create new shopping list service
   var shoppingList = ShoppingListFactory();
 
   list1.items = shoppingList.getItems();
-
   list1.itemName = "";
   list1.itemQuantity = "";
-
   list1.addItem = function () {
     shoppingList.addItem(list1.itemName, list1.itemQuantity);
   }
@@ -41,7 +38,6 @@ function ShoppingListController2(ShoppingListFactory) {
 
   list2.itemName = "";
   list2.itemQuantity = "";
-
   list2.addItem = function () {
     try {
       shoppingList.addItem(list2.itemName, list2.itemQuantity);
