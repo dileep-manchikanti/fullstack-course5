@@ -112,6 +112,10 @@
   }
 
   function displayMenuController(){
+<<<<<<< HEAD
    var menu=this;
+=======
+    var menu=this;
+>>>>>>> 1de4b58f86c9942ff8f3f8da7e78e1c476705b64
   }
 })()
