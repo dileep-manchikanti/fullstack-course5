@@ -101,7 +101,7 @@
       templateUrl:'display.html',
       scope:{
         items:'<',
-        message:'<',
+        message:'@',
         remove:'&'
       },
       controller:displayMenuController,
@@ -112,6 +112,6 @@
   }
 
   function displayMenuController(){
-    menu=this;
+   var menu=this;
   }
 })()

@@ -2,5 +2,6 @@
 Item-name:<span>{{item.name}}</span><br>
 Item-short_name:<span>{{item.short_name}}</span><br>
 Item-description:<span>{{item.description}}</span><br>
-<button ng-click=menu.remove({index:$index})></button>
+<button ng-click=menu.remove({index:$index})>Remove This Item</button>
 </li>
+<div id="error" ng-if='menu.message!=""'>{{menu.message}}</div>
