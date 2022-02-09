@@ -31,7 +31,6 @@
       items.splice(index,1);
     };
     service.getSearchItems=function(){
-      console.log(items);
       return items;
     };
     service.findItems=function (searchWord){
@@ -78,7 +77,6 @@
       data:items,
       message:""
     };
-    console.log(result.data);
     if(result.data.length==0){
       result.message="No such Items were found with the given Description";
       // console.log(result.message);
