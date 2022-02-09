@@ -112,6 +112,6 @@
   }
 
   function displayMenuController(){
-   var menu=this;
+    var menu=this;
   }
 })()
