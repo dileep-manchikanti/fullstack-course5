@@ -1,0 +1,31 @@
+body{
+	background-color: #61111f;
+}
+h1{
+	color:#f6b319;
+}
+.input button{
+	width:50%;
+	float:right;
+	font-weight: bold;
+	color:maroon;
+	background-color: green;
+	font-size: 25px;	
+	height:40px;
+}
+input{
+	color:red;
+}
+span{
+	font-weight: bold;
+	font-size:15px;
+	color:green;
+}
+li{
+	color:red;
+}
+.input>input{
+	float:left;
+	width:40%;
+	height:40px;
+}
