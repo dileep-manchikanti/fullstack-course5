@@ -5,5 +5,5 @@ Item-description:<span>{{item.description}}</span><br>
 <button ng-click=menu.remove({index:$index})>Remove This Item</button>
 </li>
 <br><br>
-{{menu.items.length}}
+{{menu.items}}
 <div id="error" ng-if='menu.items.length==0'>No Results were found for the entered text!!!</div>
