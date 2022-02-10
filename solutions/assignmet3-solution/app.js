@@ -69,7 +69,6 @@
       var items=[];
     for(var i=0;i<menu.data.length;i++){
       if(menu.data[i].description.toLowerCase().indexOf(menu.searchWord)!=-1){
-        // console.log(menu.data[i].description);
         items.push(menu.data[i]);
       }
     }
@@ -79,13 +78,10 @@
     };
     if(result.data.length==0){
       result.message="No such Items were found with the given Description";
-      // console.log(result.message);
       promise.reject(result);
-      // promise.message="No such Items were found with the given Description";
     }
     else{
       promise.resolve(result);
-      // console.log(result.data);
     }
     })
       },1000);
@@ -99,7 +95,6 @@
       templateUrl:'display.html',
       scope:{
         items:'<',
-        message:'@',
         remove:'&'
       },
       controller:displayMenuController,
@@ -111,6 +106,6 @@
 
   function displayMenuController(){
     var menu=this;
-    console.log(menu.message);
-  }
+    menu.items=["somehting"];
+    }
 })()
