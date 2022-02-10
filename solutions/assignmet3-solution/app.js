@@ -37,7 +37,7 @@
       items=[];
       if(searchWord=="")service.errorMessage="Didn't entered any word, Enter any word to search items from menu which matcjes description";
       else{
-      var promise=menuRetrievalService.findItems(searchWord);
+      var promise=menuRetrievalService.findItems(searchWord.toLowerCase());
       $q.all([promise])
       .then(function(response){
         data=response[0].data;
@@ -111,5 +111,6 @@
 
   function displayMenuController(){
     var menu=this;
+    console.log(menu.message);
   }
 })()
