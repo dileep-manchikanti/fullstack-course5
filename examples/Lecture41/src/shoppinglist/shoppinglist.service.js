@@ -1,12 +1,12 @@
 (function () {
 'use strict';
 
-angular.module('MenuApp')
-.service('MenuService', MenuService);
+angular.module('ShoppingList')
+.service('ShoppingListService', ShoppingListService);
 
 
-// MenuService.$inject = ['$q', '$timeout']
-function MenuService() {
+ShoppingListService.$inject = ['$q', '$timeout']
+function ShoppingListService($q, $timeout) {
   var service = this;
 
   // List of shopping items
@@ -31,7 +31,7 @@ function MenuService() {
 
   // Simulates call to server
   // Returns a promise, NOT items array directly
-  service.getCategories = function () {
+  service.getItems = function () {
     var deferred = $q.defer();
 
     // Wait 2 seconds before returning
@@ -39,31 +39,8 @@ function MenuService() {
       // deferred.reject(items);
       deferred.resolve(items);
     }, 800);
-    // var categoriesHtml='https://davids-restaurant.herokuapp.com/categories.json';
-    // var response=$http({
-    //   method:"GET",
-    //   url:categoriesHtml
-    // });
-    return deferred.promise();
-  };
 
-  service.getItems = function (short_name) {
-    var deferred = $q.defer();
-
-    // Wait 2 seconds before returning
-    $timeout(function () {
-      // deferred.reject(items);
-      deferred.resolve(items);
-    }, 800);
-    // var singleCategoryHtml='https://davids-restaurant.herokuapp.com/menu_items.json';
-    // var response=$http({
-    //   method:"GET",
-    //   url:singleCategoryHtml,
-    //   params:{
-    //     category:short_name
-    //   }
-    // });
-    return deferred.promise();
+    return deferred.promise;
   };
 }
 
