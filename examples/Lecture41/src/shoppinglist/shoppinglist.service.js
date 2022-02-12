@@ -40,6 +40,7 @@ function MenuService($q, $timeout) {
       method:"GET",
       url:'https://davids-restaurant.herokuapp.com/categories.json'
     });
+    console.log("hi");
     response.then(function(info){
       console.log(info.data);
       deferred.resolve(info.data);
