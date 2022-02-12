@@ -32,15 +32,20 @@ function MenuService($q, $timeout) {
   // Simulates call to server
   // Returns a promise, NOT items array directly
   service.getItems = function () {
-    var deferred = $q.defer();
+    // var deferred = $q.defer();
 
-    // Wait 2 seconds before returning
-    $timeout(function () {
-      // deferred.reject(items);
-      deferred.resolve(items);
-    }, 800);
+    // // Wait 2 seconds before returning
+    // $timeout(function () {
+    //   // deferred.reject(items);
+    //   deferred.resolve(items);
+    // }, 800);
 
-    return deferred.promise;
+    var response=$http({
+      method:"GET",
+      url:'https://davids-restaurant.herokuapp.com/categories.json'
+    });
+    console.log(response);
+    return response;
   };
 }
 
