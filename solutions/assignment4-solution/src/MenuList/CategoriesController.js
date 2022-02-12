@@ -9,4 +9,4 @@
 		list.categories=categories;
 		console.log(list.categories);
 	}
-})()
+})();

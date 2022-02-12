@@ -40,4 +40,4 @@
 			return service.items;
 		}
 	}
-})()
+})();
