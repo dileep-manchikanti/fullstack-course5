@@ -9,6 +9,7 @@
 		var categoriesHtml='https://davids-restaurant.herokuapp.com/categories.json';
 		var singleCategoryHtml='https://davids-restaurant.herokuapp.com/menu_items.json?category=';
 		service.getCategories=function(){
+			console.log("hi");
 			$http({
 				method:"GET",
 				url:categoriesHtml
