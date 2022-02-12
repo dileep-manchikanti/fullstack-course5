@@ -1,7 +1,7 @@
 (function (){
 	'use strict';
 
-	angular.module('ShoppingList')
+	angular.module('MenuApp')
 	.component('itemsList',{
 		templateUrl: 'src/shoppinglist/templates/itemsDisplay.html',
 		bindings:{
