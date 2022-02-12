@@ -45,7 +45,7 @@ function MenuService($q, $timeout) {
       deferred.resolve(info.data);
     });
     console.log(response);
-    return deferred.promise;
+    return deferred.promise();
   };
 }
 
