@@ -1,8 +1,8 @@
 (function () {
 'use strict';
 
-angular.module('ShoppingList')
-.controller('ItemDetailController', ItemDetailController);
+angular.module('MenuApp')
+.controller('categoryDetailController', categoryDetailController);
 
 
 ItemDetailController.$inject = ['$stateParams', 'items'];

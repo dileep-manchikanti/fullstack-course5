@@ -5,7 +5,7 @@
 
 	RouterConfig.$inject=['$stateProvider','$urlRouterProvider'];
 	function RouterConfig($stateProvider,$urlRouterProvider){
-		$urlRouterProvider.otherwise('/');
+		$urlRouterProvider.otherwise('/categories');
 		$stateProvider
 		.state('home',{
 			url:'/',
