@@ -15,7 +15,7 @@
 
 		.state('categories',{
 			url:'/categories',
-			templateUrl:'categoriesView.html',
+			templateUrl:'src/MenuList/templates/categoriesView.html',
 			controller:'categoriesController as list',
 			resolve:{
 				categories:['MenuService',function(MenuService){
@@ -25,7 +25,7 @@
 		})
 		.state('categories.items',{
 			url:'/{name}',
-			templateUrl:'singleCategoryView.html',
+			templateUrl:'src/MenuList/templates/singleCategoryView.html',
 			controller:'singleCategoryController as list',
 			resolve:{
 				items:['MenuService','$stateParams',function(MenuService,$stateParams){
