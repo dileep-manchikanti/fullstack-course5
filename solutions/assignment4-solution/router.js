@@ -19,10 +19,10 @@
 			controller:'categoriesController as list',
 			resolve:{
 				categories:['MenuService',function(MenuService){
-					MenuService.getCategories()
-					.then(function(response){
-						return response.data;
-					})
+					return MenuService.getCategories()
+					// .then(function(response){
+					// 	return response.data;
+					// })
 				}]
 			}
 		})
@@ -32,10 +32,10 @@
 			controller:'singleCategoryController as list',
 			resolve:{
 				items:['MenuService','$stateParams',function(MenuService,$stateParams){
-					MenuService.getItems($stateParams.name)
-					.then(function(response){
-						return response.data;
-					})
+					return MenuService.getItems($stateParams.name)
+					// .then(function(response){
+					// 	return response.data;
+					// })
 				}]
 			}
 		})
