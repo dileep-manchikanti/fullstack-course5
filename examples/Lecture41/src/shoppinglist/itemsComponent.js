@@ -1,7 +1,7 @@
 (function (){
 	'use strict';
 
-	angular.module('MenuApp')
+	angular.module('ShoppingList')
 	.component('itemsList',{
 		templateUrl: 'src/shoppinglist/templates/itemsDisplay.html',
 		bindings:{
@@ -10,4 +10,4 @@
 	});
 
 
-})()
+})();
