@@ -9,7 +9,7 @@
 		$stateProvider
 		.state('home',{
 			url:'/',
-			templateUrl:'src/MenuList/templates/home-view.html',
+			templateUrl:'src/MenuList/templates/home-view.html'
 			}
 		)
 
