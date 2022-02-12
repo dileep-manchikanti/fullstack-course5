@@ -7,5 +7,6 @@
 	function categoriesController(categories){
 		list=this;
 		list.categories=categories;
+		console.log(list.categories);
 	}
 })()

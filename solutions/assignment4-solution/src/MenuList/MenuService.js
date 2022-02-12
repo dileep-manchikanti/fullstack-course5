@@ -19,6 +19,7 @@
 			.catch(function(error){
 				console.log('some thing went terribly wrong');
 			});
+			console.log(service.categories);
 			return service.categories;
 		}
 
