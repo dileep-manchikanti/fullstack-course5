@@ -5,8 +5,8 @@ angular.module('ShoppingList')
 .controller('categoryDetailController', categoryDetailController);
 
 
-ItemDetailController.$inject = ['$stateParams', 'items'];
-function ItemDetailController($stateParams, items) {
+categoryDetailController.$inject = ['$stateParams', 'items'];
+function categoryDetailController($stateParams, items) {
   var itemDetail = this;
   var item = items[$stateParams.itemId];
   itemDetail.name = item.name;
