@@ -9,36 +9,24 @@
 		var categoriesHtml='https://davids-restaurant.herokuapp.com/categories.json';
 		var singleCategoryHtml='https://davids-restaurant.herokuapp.com/menu_items.json?category=';
 		service.getCategories=function(){
-			console.log("hi");
-			$http({
+			console.log("hi");	
+			var response=$http({
 				method:"GET",
 				url:categoriesHtml
-			})
-			.then(function(response){
-				service.categories=response.data;
-			})
-			.catch(function(error){
-				console.log('some thing went terribly wrong');
 			});
 			console.log(service.categories);
-			return service.categories;
+			return response;
 		}
 
 		service.getItems=function(short_name){
-			$http({
+			var response=$http({
 				method:"GET",
 				url:singleCategoryHtml,
 				params:{
 					category:short_name
 				}
-			})
-			.then(function(response){
-				service.items=response.data;
-			})
-			.catch(function(error){
-				console.log('some thing went terribly wrong');
 			});
-			return service.items;
+			return response;
 		}
 	}
 })();
