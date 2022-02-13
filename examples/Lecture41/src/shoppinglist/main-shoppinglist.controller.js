@@ -13,6 +13,7 @@ function categoryController(MenuService) {
   promise
   .then(function(response){
   	items=response.data;
+  	console.log(response);
   });
   mainlist.items = items;
 }
