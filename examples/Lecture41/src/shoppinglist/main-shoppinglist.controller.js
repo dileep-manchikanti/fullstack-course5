@@ -15,6 +15,9 @@ function categoryController(MenuService) {
   	items=response.data;
   	console.log(response.data);
   });
+  console.log(items);
+  console.log(items[0]);
+  console.loog(items[0].name);
   mainlist.items = items;
 }
 
