@@ -12,7 +12,7 @@ function categoryController(MenuService) {
   var items=[];
   promise
   .then(function(response){
-  	items=respnse.data;
+  	items=response.data;
   });
   mainlist.items = items;
 }
