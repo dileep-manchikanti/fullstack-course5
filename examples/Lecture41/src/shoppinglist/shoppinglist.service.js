@@ -5,8 +5,8 @@ angular.module('ShoppingList')
 .service('MenuService', MenuService);
 
 
-MenuService.$inject = ['$q', '$timeout']
-function MenuService($q, $timeout) {
+MenuService.$inject = ['$q', '$http']
+function MenuService($q, $http) {
   var service = this;
 
   // List of shopping items
