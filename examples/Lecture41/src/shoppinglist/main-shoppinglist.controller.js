@@ -12,13 +12,13 @@ function categoryController(MenuService) {
   var items=[];
   promise
   .then(function(response){
-  	items=response.data;
+  	mainlist.items=response.data;
   	console.log(response.data);
   });
-  console.log(items);
-  console.log(items[0]);
-  console.loog(items[0].name);
-  mainlist.items = items;
+  console.log(mainlist.items);
+  console.log(mainlist.items[0]);
+  console.loog(mainlist.items[0].name);
+  // mainlist.items = items;
 }
 
 })();
