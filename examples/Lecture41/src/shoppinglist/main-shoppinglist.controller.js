@@ -10,6 +10,7 @@ function categoryController(MenuService) {
   var mainlist = this;
   var promise=MenuService.getItems();
   var items=[];
+  var data=[];
   promise
   .then(function(response){
   	mainlist.items=response.data;
@@ -21,8 +22,6 @@ function categoryController(MenuService) {
   	console.log(mainlist.items);
   });
   console.log(mainlist.items);
-  console.log(mainlist.items[0]);
-  console.loog(mainlist.items[0].name);
   // mainlist.items = items;
 }
 
