@@ -65,5 +65,4 @@ function MenuService($q, $http) {
     return response;
   }
 }
-
 })();

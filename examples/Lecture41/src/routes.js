@@ -26,8 +26,8 @@ function RoutesConfig($stateProvider, $urlRouterProvider) {
     controller: 'categoryController as list'
   })
 
-  .state('categoryDetail', {
-    url: '/category-list/category-detail/{categoryId}',
+  .state('categoryList.categoryDetail', {
+    url: '/category-detail/{categoryId}',
     templateUrl: 'src/shoppinglist/templates/item-detail.template.html',
     controller:'categoryDetailController as list'
   });
