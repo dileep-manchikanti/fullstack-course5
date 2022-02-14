@@ -6,8 +6,9 @@ angular.module('ShoppingList')
 
 
 categoryDetailController.$inject = ['MenuService','$stateParams'];
-function categoryDetailController($stateParams) {
+function categoryDetailController(MenuService,$stateParams) {
   var category=$stateParams.categoryId;
+  var list=this;
   var data=[];
   var items=[];
   var promise=MenuService.getItems(category);
@@ -19,6 +20,7 @@ function categoryDetailController($stateParams) {
     }
     console.log(items);
   });
+  list.items=items;
 }
 
 })();
