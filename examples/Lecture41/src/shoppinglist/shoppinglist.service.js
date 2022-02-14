@@ -62,7 +62,6 @@ function MenuService($q, $http) {
         category:type
       }
     });
-    console.log(response);
     return response;
   }
 }

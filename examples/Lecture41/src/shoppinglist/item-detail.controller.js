@@ -16,6 +16,8 @@ function categoryDetailController(MenuService,$stateParams) {
   promise
   .then(function(response){
   	data=response.data["menu_items"];
+  	console.log(response);
+  	console.log(data);
     for(var i=0;i<data.length;i++){
       items.push(data[i]);
     }
