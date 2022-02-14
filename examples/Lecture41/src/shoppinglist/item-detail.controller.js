@@ -8,6 +8,7 @@ angular.module('ShoppingList')
 categoryDetailController.$inject = ['MenuService','$stateParams'];
 function categoryDetailController(MenuService,$stateParams) {
   var category=$stateParams.categoryId;
+  console.log(category);
   var list=this;
   var data=[];
   var items=[];
