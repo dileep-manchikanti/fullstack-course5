@@ -31,7 +31,7 @@ function MenuService($q, $http) {
 
   // Simulates call to server
   // Returns a promise, NOT items array directly
-  service.getItems = function () {
+  service.getCategories = function () {
     // var deferred = $q.defer();
 
     // // Wait 2 seconds before returning

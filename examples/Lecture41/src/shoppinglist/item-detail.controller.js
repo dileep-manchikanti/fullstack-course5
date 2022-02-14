@@ -5,13 +5,20 @@ angular.module('ShoppingList')
 .controller('categoryDetailController', categoryDetailController);
 
 
-categoryDetailController.$inject = ['$stateParams', 'items'];
-function categoryDetailController($stateParams, items) {
-  var itemDetail = this;
-  var item = items[$stateParams.categoryId];
-  itemDetail.name = item.name;
-  itemDetail.quantity = item.quantity;
-  itemDetail.description = item.description;
+categoryDetailController.$inject = ['MenuService','$stateParams'];
+function categoryDetailController($stateParams) {
+  var category=$stateParams.categoryId;
+  var data=[];
+  var items=[];
+  var promise=MenuService.getItems(category);
+  promise
+  .then(function(response){
+  	data=response.data["menu_items"];
+    for(var i=0;i<data.length;i++){
+      items.push(data[i]);
+    }
+    console.log(items);
+  });
 }
 
 })();
