@@ -40,29 +40,15 @@ function MenuService($q, $http) {
     //   deferred.resolve(items);
     // }, 800);
 
-    var response=$http({
-      method:"GET",
-      url:'https://davids-restaurant.herokuapp.com/categories.json'
+    return $http.get('https://davids-restaurant.herokuapp.com/categories.json').then(function (response){
+      return response.data;
     });
-    console.log("hi");
-    // response.then(function(info){
-    //   console.log(info.data);
-    //   deferred.resolve(info.data);
-    // });
-
-    return response;
   };
 
   service.getItems=function(type){
-    console.log(type);
-    var response=$http({
-      method:"GET",
-      url:'https://davids-restaurant.herokuapp.com/menu_items.json',
-      params:{
-        category:type
-      }
+    return $http.get('https://davids-restaurant.herokuapp.com/menu_items.json?category='+type).then(function (response){
+      return response.data;
     });
-    return response;
-  }
+  };
 }
 })();

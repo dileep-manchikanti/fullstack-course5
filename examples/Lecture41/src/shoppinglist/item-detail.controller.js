@@ -10,19 +10,7 @@ function categoryDetailController(MenuService,$stateParams) {
   var category=$stateParams.categoryId;
   console.log(category);
   var list=this;
-  var data=[];
-  var items=[];
-  var promise=MenuService.getItems(category);
-  promise
-  .then(function(response){
-  	data=response.data["menu_items"];
-  	console.log(response);
-  	console.log(data);
-    for(var i=0;i<data.length;i++){
-      items.push(data[i]);
-    }
-    console.log(items);
-  });
+  var items=MenuService.getItems(category);
   list.items=items;
 }
 
