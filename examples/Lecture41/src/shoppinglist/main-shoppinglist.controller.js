@@ -5,12 +5,10 @@ angular.module('ShoppingList')
 .controller('categoryController', categoryController);
 
 
-categoryController.$inject = ['MenuService'];
-function categoryController(MenuService) {
+categoryController.$inject = ['MenuService','items'];
+function categoryController(MenuService,items) {
   var mainlist = this;
-  var items=MenuService.getCategories();
-  console.log(items.value);
-  mainlist.items = items.value;
+  mainlist.items = items;
 }
 
 })();

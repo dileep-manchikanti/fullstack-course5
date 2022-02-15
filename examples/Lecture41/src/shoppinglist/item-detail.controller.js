@@ -5,12 +5,9 @@ angular.module('ShoppingList')
 .controller('categoryDetailController', categoryDetailController);
 
 
-categoryDetailController.$inject = ['MenuService','$stateParams'];
-function categoryDetailController(MenuService,$stateParams) {
-  var category=$stateParams.categoryId;
-  console.log(category);
+categoryDetailController.$inject = ['MenuService','items'];
+function categoryDetailController(MenuService,items) {
   var list=this;
-  var items=MenuService.getItems(category);
   list.items=items;
 }
 
