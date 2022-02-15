@@ -8,6 +8,7 @@ angular.module('ShoppingList')
 categoryDetailController.$inject = ['MenuService','items'];
 function categoryDetailController(MenuService,items) {
   var list=this;
+  console.log(items);
   list.items=items;
 }
 
