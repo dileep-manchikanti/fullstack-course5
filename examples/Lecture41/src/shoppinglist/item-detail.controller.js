@@ -9,7 +9,7 @@ categoryDetailController.$inject = ['MenuService','items'];
 function categoryDetailController(MenuService,items) {
   var list=this;
   console.log(items);
-  list.items=items;
+  list.items=items.menu_items;
 }
 
 })();
