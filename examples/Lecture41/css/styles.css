@@ -1,7 +1,19 @@
 body {
   font-size: 1.2em;
+  background-color: background-color: #61111f;
 }
-
+h1{
+  color:#f6b319;
+}
+span{
+  font-weight: bold;
+  font-size:18px;
+  color:green;
+}
+li{
+  color:#eb6134;
+  font-size:13px;
+}
 .error {
   color: red;
   font-weight: bold;
