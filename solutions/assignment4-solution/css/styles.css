@@ -4,8 +4,9 @@ body {
 }
 h1{
   color:#f6b319;
+  text-align: center;
 }
-h3{
+h3,h2{
   color:violet;
 }
 span{
