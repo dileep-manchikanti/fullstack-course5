@@ -9,7 +9,6 @@ categoryController.$inject = ['MenuService','items'];
 function categoryController(MenuService,items) {
   var mainlist = this;
   mainlist.items = items;
-  console.log(items[0].short_name);
 }
 
 })();
