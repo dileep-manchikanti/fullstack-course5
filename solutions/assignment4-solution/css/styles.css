@@ -1,16 +1,21 @@
-body{
-  background-color: #61111f;
+body {
+  font-size: 1.2em;
+  background-color:#61111f;
 }
 h1{
   color:#f6b319;
 }
-h2{
-  color:maroon;
+h3{
+  color:violet;
 }
 span{
   font-weight: bold;
   font-size:20px;
   color:green;
+}
+a{
+  color:green;
+  font-size:24px;
 }
 li{
   color:#eb6134;
@@ -21,11 +26,13 @@ li{
   font-weight: bold;
   display: none;
 }
+
 .loading-icon {
   position: absolute;
   left: 50%;
   top: 10px;
 }
+
 li[ui-sref]:hover {
   display: inline-block;
   cursor: pointer;
