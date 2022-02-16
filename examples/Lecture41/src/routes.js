@@ -36,8 +36,7 @@ function RoutesConfig($stateProvider, $urlRouterProvider) {
     templateUrl: 'src/shoppinglist/templates/item-detail.template.html',
     controller:'categoryDetailController as list',
     resolve:{
-      items:['MenuService','$stateParams',function (MenuService,$stateParams){
-        console.log($stateParams.category);  
+      items:['MenuService','$stateParams',function (MenuService,$stateParams){ 
         return MenuService.getItems($stateParams.category);
       }]
     }
