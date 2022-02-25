@@ -18,12 +18,12 @@ function SpinnerController($rootScope) {
     function(event, toState, toParams, fromState, fromParams, options){
       $ctrl.showSpinner = true;
     });
-    cancellers.push(cancel);
+    cancellers.push(cancellers);
 
     cancel = $rootScope.$on('$stateChangeSuccess',
     function(event, toState, toParams, fromState, fromParams){
       $ctrl.showSpinner = false;
-    });
+    }); 
     cancellers.push(cancel);
 
     cancel = $rootScope.$on('$stateChangeError',

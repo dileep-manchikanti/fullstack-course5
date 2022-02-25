@@ -1,19 +1,23 @@
-body {
-  font-size: 1.2em;
-  background-color:#61111f;
+body{
+  background-color: #61111f;
 }
 h1{
   color:#f6b319;
 }
+h2{
+  color:maroon;
+}
 span{
   font-weight: bold;
-  font-size:18px;
+  font-size:20px;
   color:green;
 }
 li{
   color:#eb6134;
-  font-size:13px;
+  font-size:24px;
 }
+
+
 .error {
   color: red;
   font-weight: bold;

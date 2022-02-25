@@ -7,9 +7,10 @@ angular.module('public')
 /**
  * Configures the routes and views
  */
-routeConfig.$inject = ['$stateProvider'];
-function routeConfig ($stateProvider) {
+routeConfig.$inject = ['$stateProvider','$urlRouterProvider'];
+function routeConfig ($stateProvider,$urlRouterProvider) {
   // Routes
+  // $urlRouterProvider.otherwise('public.home');
   $stateProvider
     .state('public', {
       abstract: true,
@@ -40,6 +41,19 @@ function routeConfig ($stateProvider) {
           return MenuService.getMenuItems($stateParams.category);
         }]
       }
-    });
+    })
+    .state('myInfo',{
+      url: '/user/info',
+      templateUrl: 'src/public/user/user-info.html',
+      controller: 'userInfoController',
+      controllerAs: 'userInfoCtrl'
+    })
+    .state('signUp',{
+      url:'/user/signUp',
+      templateUrl: 'src/public/user/signUp.html',
+      controller: 'signUpController',
+      controllerAs:'signUpCtrl'
+    })
+    ;
 }
 })();
