@@ -7,7 +7,8 @@ angular.module('public')
 MenuItemsController.$inject = ['menuItems'];
 function MenuItemsController(menuItems) {
   var $ctrl = this;
-  $ctrl.menuItems = menuItems.menu_items;
+  $ctrl.menuItems = menuItems;
+  console.log($ctrl.menuItems);
 }
 
 })();
