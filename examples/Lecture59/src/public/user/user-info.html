@@ -1,4 +1,5 @@
-<div ng-if='!userInfoCtrl.is_signed'>Not signed up yet, <a ui-sref='public.signUp'>Sign Up Now
+<link rel="stylesheet" type="text/css" href="css/info.css">
+<div id='noUser' ng-if='!userInfoCtrl.is_signed'>Not signed up yet, <a ui-sref='public.signUp'>Sign Up Now
 </a></div>
 <div ng-if='userInfoCtrl.is_signed'>
 <fieldset>

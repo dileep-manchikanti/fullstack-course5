@@ -11,10 +11,10 @@
 			$http.get('https://davids-restaurant.herokuapp.com/categories.json').then(function (response) {
       signUp.user.favourite=response.data[signUp.user.favourite];
       service.user=signUp.user;
-      signUp.invalid=false;
+      window.alert("Your Info is saved Sucessfully....");
     })
 	.catch(function(error){
-		signUp.invalid=true;
+		window.alert("the favourite dish name you entered is Invalid!!!.please enter a valid name for Favourite dish");
 	});
 		}
 	}
