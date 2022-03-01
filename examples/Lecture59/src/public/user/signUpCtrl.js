@@ -18,8 +18,9 @@
       	if(data[i].short_name==favourite)signUp.user.favourite=data[i];
       }
       console.log(signUp.user.favourite);
+      if(signUp.user.favourite==undefined)window.alert("Not a valid favourite dish name entered.");
+      else window.alert("Your Info is saved Sucessfully....");
       service.user=signUp.user;
-      window.alert("Your Info is saved Sucessfully....");
     })
 	.catch(function(error){
 		window.alert("the favourite dish name you entered is Invalid!!!.please enter a valid name for Favourite dish");
