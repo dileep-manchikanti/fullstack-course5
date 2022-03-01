@@ -3,8 +3,10 @@ input{
 	margin-left:200px;
 	align-items: center;
 	color: green;
+	font-weight: bold;
 }
 button{
 	margin-top: 15px;
 	margin-left: 250px;
+	background-color: green;
 }
