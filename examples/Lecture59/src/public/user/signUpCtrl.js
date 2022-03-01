@@ -10,6 +10,7 @@
 		signUp.submit=function(){
 			$http.get('https://davids-restaurant.herokuapp.com/categories.json').then(function (response) {
       console.log(signUp.user.favourite);
+      console.log(response.data);
       signUp.user.favourite=response.data[signUp.user.favourite];
       console.log(signUp.user.favourite);
       service.user=signUp.user;
