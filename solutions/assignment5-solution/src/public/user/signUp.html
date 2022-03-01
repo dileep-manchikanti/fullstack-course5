@@ -1,0 +1,53 @@
+<link rel="stylesheet" type="text/css" href="css/signUp.css">
+  <fieldset>
+  <legend color='green'>Sign Up Page</legend>
+  <form name="regForm" novalidate>
+    <input type="text" name="firstName" placeholder="enter your first name"
+    ng-model=signUpCtrl.user.firstname
+    required minlength="2" ng-maxlength='10'>
+    <span ng-if='(regForm.firstName.$error.minlength || regForm.firstName.$error.required) && regForm.firstName.$touched'>
+      firstName must be at least 2 Characters long
+    </span>
+    <span ng-if='regForm.firstName.$error.maxlength  && regForm.firstName.$touched'>
+      firstName must not be longer than 10 Characters
+    </span>
+    <br>
+    <input type="text" name="lastName" placeholder="enter your last Name"
+    ng-model=signUpCtrl.user.lastname
+    required minlength="2" ng-maxlength='10'>
+    <span ng-if='(regForm.lastName.$error.minlength || regForm.lastName.$error.required) && regForm.lastName.$touched'>
+      lastName must be at least 2 Characters long
+    </span>
+    <span ng-if='regForm.lastName.$error.maxlength  && regForm.lastName.$touched'>
+      lastName must not be longer than 10 Characters
+    </span>
+    <br>
+    <input type="email" name="email"
+    required ng-model='signUpCtrl.user.email' placeholder="Email-id">
+    <span ng-if='regForm.email.$invalid && regForm.email.$touched'>
+      Not in a valid format of (username@domainName) format
+    </span>
+    <br>
+    <input type="text" name="mobile" placeholder="Enter mobile number"
+    ng-model="signUpCtrl.user.mobile" pattern="\d{10}">
+    <span ng-if='regForm.mobile.$invalid && regForm.mobile.$touched'>
+      Mobile Number should be consisting of 10 digits only
+    </span>
+    <br>
+    <input type="text" name="favourite" placeholder="Enter your Favourite dish short_name" ng-model='signUpCtrl.user.favourite'>
+    <span ng-if='signUpCtrl.inValid'>Choose your favourite dish with correct Label
+    </span>
+    <br>
+    <button
+    ng-disabled='regForm.$invalid'
+    ng-click='signUpCtrl.submit()'>
+      Submit
+    </button>
+    <br><br>
+    <div ng-if='regForm.$valid'>Form is Valid</div>
+    <div ng-if='regForm.$invalid reg.clear()'>Form is Not Valid</div>
+  </form>
+</fieldset>
+
+<div ng-if="!signUpCtrl.invalid">your Info is saved Sucessfully!!!</div>
+

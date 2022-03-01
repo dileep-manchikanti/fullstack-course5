@@ -1,0 +1,19 @@
+<div ng-if='!userInfoCtrl.is_signed'>Not signed up yet, <a ui-sref='signUp'>Sign Up Now
+</a></div>
+<div nf-if='userInfoCtrl.is_signed'>
+<fieldset>
+	<legend>User Info</legend>
+	<div>
+		First Name: {{userInfoCtrl.user.firstname}}<br>
+		Last Name: {{userInfoCtrl.user.lastname}}<br>
+		Email-Id: {{userInfoCtrl.user.email}}<br>
+		Mobile No: {{userInfoCtrl.user.mobile}}<br>
+		<h3 text-align='center'>Favourite Dish - {{userInfoCtrl.user.favourite.name}}
+		</h3>
+		<img src="images/menu/{{userInfoCtrl.user.favourite.short_name}}/{{userInfoCtrl.user.favourite.short_name}}.jpg" 
+		alt="loading">
+		{{userInfoCtrl.user.favourite.special_instructions}}
+	</div>
+</fieldset>
+</div>
+
