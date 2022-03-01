@@ -17,6 +17,7 @@
       for(var i=0;i<data.length;i++){
       	if(data[i].short_name==favourite)signUp.user.favourite=data[i];
       }
+      console.log(signUp.user.favourite);
       service.user=signUp.user;
       window.alert("Your Info is saved Sucessfully....");
     })
