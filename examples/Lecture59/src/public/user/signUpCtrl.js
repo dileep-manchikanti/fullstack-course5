@@ -9,16 +9,16 @@
 		signUp.invalid=true;
 		signUp.submit=function(){
 			$http.get('https://davids-restaurant.herokuapp.com/categories.json').then(function (response) {
-      console.log(signUp.user.favourite);
-      console.log(response.data);
       var data=response.data;
       var favourite=signUp.user.favourite;
       signUp.user.favourite=undefined;
       for(var i=0;i<data.length;i++){
       	if(data[i].short_name==favourite)signUp.user.favourite=data[i];
       }
-      console.log(signUp.user.favourite);
-      if(signUp.user.favourite==undefined)window.alert("Not a valid favourite dish name entered.");
+      if(signUp.user.favourite==undefined){
+      	window.alert("Not a valid favourite dish name entered.");
+      	signUp.user=undefined;
+      }
       else window.alert("Your Info is saved Sucessfully....");
       service.user=signUp.user;
     })
