@@ -3,7 +3,7 @@
 	angular.module('public')
 	.controller('userInfoCtrl',userInfoCtrl);
 
-	userInfoController.$inject=['infoService'];
+	userInfoCtrl.$inject=['infoService'];
 	function userInfoCtrl(infoService){
 		var info=this;
 		var service=infoService;
