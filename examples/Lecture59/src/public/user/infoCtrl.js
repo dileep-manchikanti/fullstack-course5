@@ -1,7 +1,7 @@
 (function (){
 	'use strict';
 	angular.module('public')
-	.controller('userInfoCtrl'userInfoCtrl);
+	.controller('userInfoCtrl',userInfoCtrl);
 
 	userInfoController.$inject=['infoService'];
 	function userInfoCtrl(infoService){
