@@ -42,13 +42,13 @@ function routeConfig ($stateProvider,$urlRouterProvider) {
         }]
       }
     })
-    .state('myInfo',{
+    .state('public.myInfo',{
       url: '/user/info',
       templateUrl: 'src/public/user/user-info.html',
       controller: 'userInfoController',
       controllerAs: 'userInfoCtrl'
     })
-    .state('signUp',{
+    .state('public.signUp',{
       url:'/user/signUp',
       templateUrl: 'src/public/user/signUp.html',
       controller: 'signUpController',
