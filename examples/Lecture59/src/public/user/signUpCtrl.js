@@ -2,7 +2,7 @@
 	'use strict';
 	angular.module('public')
 	.controller('signUpCtrl',signUpCtrl);
-	signUpCtrl.$inject=['$http','infoService']
+	signUpCtrl.$inject=['$http','infoService'];
 	function signUpCtrl($http,infoService){
 		var signUp=this;
 		var service=infoService;
