@@ -8,12 +8,15 @@
 		var service=infoService;
 		signUp.invalid=true;
 		signUp.submit=function(){
-			$http.get('https://davids-restaurant.herokuapp.com/categories.json').then(function (response) {
+			$http.get('https://davids-restaurant.herokuapp.com/menu_items.json').then(function (response) {
       var data=response.data;
       var favourite=signUp.user.favourite;
       signUp.user.favourite=undefined;
       for(var i=0;i<data.length;i++){
-      	if(data[i].short_name==favourite)signUp.user.favourite=data[i];
+      	if(data[i].short_name==favourite){
+      		signUp.user.favourite=data[i];
+      		break;
+      	}
       }
       if(signUp.user.favourite==undefined){
       	window.alert("Not a valid favourite dish name entered.");
