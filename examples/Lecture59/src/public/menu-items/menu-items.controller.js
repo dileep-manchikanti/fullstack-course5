@@ -9,8 +9,8 @@ function MenuItemsController(menuItems) {
   var $ctrl = this;
   $ctrl.menuItems = menuItems;
   console.log($ctrl.menuItems);
-  for(var item in $ctrl.menuItems.menu_items){
-  	console.log(item);
+  for(var i=0;i<$ctrl.menuItems.menu_items.length;){
+  	console.log($ctrl.menuItems.menu_items[i]);
   }
 }
 
