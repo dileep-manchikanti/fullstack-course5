@@ -34,8 +34,8 @@
       Mobile Number should be consisting of 10 digits only
     </span>
     <br>
-    <input type="text" name="favourite" placeholder="Enter your Favourite dish short_name" ng-model='signUpCtrl.user.favourite' minlength="1" required>
-    <span ng-if='(regForm.favourite.$error.minlength || regForm.favourite.$error.required) && regForm.favourite.$touched'>Choose your favourite dish with correct Label
+    <input type="text" name="favourite" placeholder="Enter your Favourite dish category short_name" ng-model='signUpCtrl.user.favourite' minlength="1" required>
+    <span ng-if='(regForm.favourite.$error.minlength || regForm.favourite.$error.required) && regForm.favourite.$touched'>Choose your favourite dish category with correct Label as 'L','SP','DK','NL',etc
     </span>
     <br>
     <button
