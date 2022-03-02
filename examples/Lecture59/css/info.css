@@ -2,7 +2,13 @@
 	font-size: xx-large;
 	color:aqua;
 }
+legend{
+	color:aqua;
+	font-weight: bold;
+	font-size: xx-large;
+}
 div{
 	color:green;
 	font-weight: bold;
+	font-size: x-large;
 }
