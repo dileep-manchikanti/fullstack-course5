@@ -9,7 +9,7 @@
 		signUp.invalid=true;
 		signUp.submit=function(){
 			$http.get('https://davids-restaurant.herokuapp.com/menu_items.json').then(function (response) {
-      var data=response.data;
+      var data=response.data.menu_items;
       var favourite=signUp.user.favourite;
       console.log(data);
       console.log(favourite);
