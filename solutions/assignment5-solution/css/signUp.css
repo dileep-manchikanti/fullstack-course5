@@ -1,9 +1,32 @@
 input{
 	margin-bottom: 15px;
-	margin-left:200px;
-	align-items: center;
+	margin-left:50px;
+	color: maroon;
+	font-weight:1000;
+	width:50%;
+	height:40px;
 }
 button{
 	margin-top: 15px;
-	margin-left: 250px;
+	margin-left: 450px;
+	background-color:RED;
+	height:40px;
+}
+
+button:hover{
+	background-color:green;
+}
+legend{
+	color:aqua;
+	font-size:xx-large;
+}
+div{
+	font-size:x-large;
+}
+
+#invalid{
+	color:red;
+}
+#valid{
+	color:green;
 }

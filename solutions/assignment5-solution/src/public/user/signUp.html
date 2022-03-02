@@ -34,8 +34,8 @@
       Mobile Number should be consisting of 10 digits only
     </span>
     <br>
-    <input type="text" name="favourite" placeholder="Enter your Favourite dish short_name" ng-model='signUpCtrl.user.favourite'>
-    <span ng-if='signUpCtrl.inValid'>Choose your favourite dish with correct Label
+    <input type="text" name="favourite" placeholder="Enter your Favourite dish short_name" ng-model='signUpCtrl.user.favourite' minlength="1" required>
+    <span ng-if='(regForm.favourite.$error.minlength || regForm.favourite.$error.required) && regForm.favourite.$touched'>Choose your favourite dish with correct Label
     </span>
     <br>
     <button
@@ -44,10 +44,10 @@
       Submit
     </button>
     <br><br>
-    <div ng-if='regForm.$valid'>Form is Valid</div>
-    <div ng-if='regForm.$invalid reg.clear()'>Form is Not Valid</div>
+    <div ng-if='regForm.$valid' id='valid'>Form is Valid</div>
+    <div ng-if='regForm.$invalid' id='invalid'>Form is Not Valid</div>
   </form>
 </fieldset>
 
-<div ng-if="!signUpCtrl.invalid">your Info is saved Sucessfully!!!</div>
+<!-- <div ng-if="!signUpCtrl.invalid">your Info is saved Sucessfully!!!</div> -->
 

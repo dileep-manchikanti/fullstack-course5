@@ -9,5 +9,4 @@ angular.module('public')
     short_name:'<'
   },
 });
-
 })();
