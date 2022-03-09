@@ -16,7 +16,7 @@ function MenuItemsController(menuItems) {
   for(var i=0;i<items.menu_items.length;i++){
   	$ctrl.menuItems.push(items.menu_items[i]);
   }
-  console.log($ctrl.menuItems);
+  console.log($ctrl.menuItems.values());
 }
 
 })();
