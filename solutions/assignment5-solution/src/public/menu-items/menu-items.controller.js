@@ -11,12 +11,12 @@ function MenuItemsController(menuItems) {
   $ctrl.categoryName=items.category.name;
   $ctrl.short_name=items.category.short_name;
   $ctrl.special_instructions=items.category.special_instructions;
-  $ctrl.menuItems=[];
+  $ctrl.menuItems=items.menu_items.values();
   console.log(items.menu_items);
-  for(var i=0;i<items.menu_items.length;i++){
-  	$ctrl.menuItems.push(items.menu_items[i]);
-  }
-  console.log($ctrl.menuItems.values());
+  // for(var i=0;i<items.menu_items.length;i++){
+  // 	$ctrl.menuItems.push(items.menu_items[i]);
+  // }
+  // console.log($ctrl.menuItems);
 }
 
 })();

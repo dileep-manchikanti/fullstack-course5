@@ -6,6 +6,5 @@ angular.module('public')
   templateUrl: 'src/public/menu-item/menu-item.html',
   bindings: {
     menuItem: '<'
-  },
-  
+  }
 })();
