@@ -8,7 +8,7 @@ angular.module('public')
     menuItem: '<'
   },
   controller:menuItemController
-})
+});
 
 	function menuItemController(){
 		console.log(this.menuItem);
