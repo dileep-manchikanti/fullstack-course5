@@ -13,9 +13,9 @@ function MenuItemsController(menuItems) {
   $ctrl.special_instructions=items.category.special_instructions;
   $ctrl.menuItems=items.menu_items.values();
   console.log(items.menu_items);
-  // for(var i=0;i<items.menu_items.length;i++){
-  // 	$ctrl.menuItems.push(items.menu_items[i]);
-  // }
+  for(var item in $ctrl.menuItems){
+  	console.log(item);
+  }
   // console.log($ctrl.menuItems);
 }
 
