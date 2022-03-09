@@ -12,8 +12,8 @@ function MenuItemsController(menuItems) {
   $ctrl.short_name=items.category.short_name;
   $ctrl.special_instructions=items.category.special_instructions;
   $ctrl.menuItems=items.menu_items;
-  $ctrl.menuItems=items.menu_items[0];
-  console.log(items.menu_items);
+  $ctrl.menuItems=items.menu_items;
+  console.log(items.menu_items[0]);
   for(var item in $ctrl.menuItems){
   	console.log(item);
   }
