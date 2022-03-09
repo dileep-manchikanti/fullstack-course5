@@ -7,4 +7,6 @@ angular.module('public')
   bindings: {
     menuItem: '<'
   }
-})();
+})
+}
+();
