@@ -7,7 +7,6 @@ angular.module('common')
   controller: LoadingController
 });
 
-
 LoadingController.$inject = ['$rootScope'];
 function LoadingController ($rootScope) {
   var $ctrl = this;

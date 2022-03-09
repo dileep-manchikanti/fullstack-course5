@@ -12,6 +12,7 @@ function MenuItemsController(menuItems) {
   $ctrl.short_name=items.category.short_name;
   $ctrl.special_instructions=items.category.special_instructions;
   $ctrl.menuItems=[];
+  console.log(items.menu_items);
   for(var i=0;i<items.menu_items.length;i++){
   	$ctrl.menuItems.push(items.menu_items[i]);
   }
